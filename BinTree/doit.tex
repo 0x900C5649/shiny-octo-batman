@@ -1,0 +1,56 @@
+\documentclass[12pt,a4paper,ngerman]{scrartcl}
+\usepackage[utf8] {inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{dsfont}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bussproofs}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{paralist}
+\usepackage{pstricks,pst-node,pst-tree}
+\usepackage{qtree}
+\usepackage{stmaryrd}
+\usepackage{mathabx}
+\usepackage{color, colortbl}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usepackage{polynom}
+\definecolor{chc_grey}{rgb}{0.89,.89,0.89}
+\definecolor{chc_red}{rgb}{1.84,0.17,0.12}
+\DeclareUnicodeCharacter{00A0}{~}
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,calc}
+\usepackage{comment}
+%\usepackage{ifthen}
+\usepackage{graphicx}
+\newenvironment{task1}{\subsection*{Aufgabe 1}}{}
+\newenvironment{task2}{\subsection*{Aufgabe 2}}{}
+\newenvironment{task3}{\subsection*{Aufgabe 3}}{}
+\newenvironment{task4}{\subsection*{Aufgabe 4}}{}
+%\newcommand{\group}{B}
+
+%\ifthenelse{\equal{\group}{A}}{\includecomment{task4}
+%\excludecomment{task3}}{\includecomment{task3}
+%\excludecomment{task4}}
+
+\newcommand{\ve}[2]{{\begin{pmatrix} #1 \\ #2 \end{pmatrix}}}
+\newcommand{\ma}[1]{\begin{pmatrix} #1 \end{pmatrix}}
+\newcommand{\lima}[1]{\bigl( \begin{smallmatrix} #1 \end{smallmatrix} \bigr)}
+\newcommand{\ska}[1]{\langle #1 \rangle}
+\newcommand{\no}[1]{\Vert #1 \Vert}
+
+\begin{document}
+\lhead{Nils Vossebein (2545671) \& Joshua Steffensky (2542238)}
+\rhead{Gruppe G11 (Kathrin Stark)}
+\rfoot{\today}
+	\immediate\write18{'/usr/bin/pythonw' doit.py [1,2,3] > temp.dat}
+	\input{temp.dat}
+	
+\begin{task2}
+	\immediate\write18{'/usr/bin/pythonw' doit.py [8,9,10,11] > temp.dat}
+	\input{temp.dat}
+\end{task2}
+
+\end{document}
