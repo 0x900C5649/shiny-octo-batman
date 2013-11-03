@@ -1,0 +1,28 @@
+% octobatman package
+% Version 0.1
+% (c) Joshua Steffensky
+% November 2013
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{octobatman}
+\RequirePackage{kvoptions}
+\DeclareStringOption[/usr/bin/pythonw]{python}[/usr/bin/pythonw]
+\ProcessKeyvalOptions*
+
+\RequirePackage{tikz}
+\usetikzlibrary{arrows}
+
+\tikzset{
+  treenode/.style = {align=center, inner sep=0pt, text centered,
+    font=\sffamily},
+  arn_n/.style = {treenode, circle, white, font=\sffamily\bfseries, draw=black,
+    fill=black, text width=1.5em},% arbre rouge noir, noeud noir
+  arn_r/.style = {treenode, circle, red, draw=red, 
+    text width=1.5em, very thick},% arbre rouge noir, noeud rouge
+  arn_x/.style = {treenode, rectangle, draw=black,
+    minimum width=0.5em, minimum height=0.5em}% arbre rouge noir, nil
+}
+
+\newcommand{\drawBinTree}[1]{\octobatman@python \\ \immediate\write18{'\octobatman@python' bin12tree.py #1 > temp.dat} \input{temp.dat}}
+
+%\newcommand{\drawBinTree}[1]{#1}
