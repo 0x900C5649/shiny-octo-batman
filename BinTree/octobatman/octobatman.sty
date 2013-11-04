@@ -7,6 +7,8 @@
 \ProvidesPackage{octobatman}
 \RequirePackage{kvoptions}
 \DeclareStringOption[/usr/bin/pythonw]{python}[/usr/bin/pythonw]
+%\ProcessKeyvalOptions*
+\DeclareStringOption[/usr/local/texlive/2013/texmf-dist/tex/latex/]{pak}[/usr/local/texlive/2013/texmf-dist/tex/latex/]
 \ProcessKeyvalOptions*
 
 \RequirePackage{tikz}
@@ -23,6 +25,7 @@
     minimum width=0.5em, minimum height=0.5em}% arbre rouge noir, nil
 }
 
-\newcommand{\drawBinTree}[1]{\octobatman@python \\ \immediate\write18{'\octobatman@python' bin12tree.py #1 > temp.dat} \input{temp.dat}}
+\newcommand{\drawBinTree}[1]{\immediate\write18{'\octobatman@python' \octobatman@pak/octobatman/bintree.py #1 > temp.dat} \input{temp.dat}}
 
-%\newcommand{\drawBinTree}[1]{#1}
+\newcommand{\drawHeapify}[2]{$ $ \\ \drawBinTree{#1} $ $\\
+\immediate\write18{'\octobatman@python' \octobatman@pak/octobatman/printheapify.py #1 #2 > temp.dat} \input{temp.dat}}

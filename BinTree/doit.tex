@@ -1,7 +1,5 @@
 \documentclass{article}
-\usepackage{tikz}
-\usetikzlibrary{arrows}
-\usepackage{octobatman}
+\usepackage[python = {/usr/bin/pythonw},pak = {/usr/local/texlive/2013/texmf-dist/tex/latex/}]{octobatman}
 %\tikzset{
 %  treenode/.style = {align=center, inner sep=0pt, text centered,
 %    font=\sffamily},
@@ -17,5 +15,17 @@
 \section{ha}
 %\immediate\write18{'/usr/bin/pythonw' bin12tree.py [1,2,3,4,5,6,7,8,9,10,11,12] > temp.dat}
 %\input{temp.dat}
-\drawBinTree{[1,2,3,4,5,6,7,8,9,10,11,12]}
+%\drawBinTree{[1,2,3,4,5,6,7,8,10,10,11,12]}
+
+%\drawHeapify{[1,3,3,3,5,6,7,8,9,10,11,12]}{0}
+
+\drawBinTree{[13,5,9,6,5,1,17,23,16,12,3,6]}
+
+
+%\drawBinTree{[27,20,19,10,12,11,5,3,2,10,5,3]}
+
+%\drawBinTree{[7,21,17,13,15,12,1,3,12,11,4,5]}
+
+\drawHeapify{[7,21,17,13,15,12,1,3,12,11,4,5]}{1}
+%\immediate\write18{'/usr/bin/pythonw' printheapify.py [7,21,17,13,15,12,1,3,12,11,4,5] 1 > temp.dat} \input{temp.dat}
 \end{document}
