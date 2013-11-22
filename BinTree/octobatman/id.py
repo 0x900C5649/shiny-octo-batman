@@ -1,5 +1,5 @@
-#! /usr/bin/env python
+#! /usr/local/bin/pythonw
 import sys
 import uuid
 
-print "%s" % uuid.uuid4().hex
+print ("%s" % uuid.uuid4().hex)

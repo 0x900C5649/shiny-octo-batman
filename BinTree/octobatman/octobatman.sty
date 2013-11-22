@@ -6,7 +6,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{octobatman}
 \RequirePackage{kvoptions}
-\DeclareStringOption[/usr/local/bin/python]{python}[/usr/bin/pythonw]
+\DeclareStringOption[/usr/bin/pythonw]{python}[/usr/bin/pythonw]
 %\ProcessKeyvalOptions*
 \DeclareStringOption[/usr/local/texlive/2013/texmf-dist/tex/latex/]{pak}[/usr/local/texlive/2013/texmf-dist/tex/latex/]
 \ProcessKeyvalOptions*
@@ -30,4 +30,4 @@
 \newcommand{\drawHeapify}[2]{$ $ \\ \drawBinTree{#1} $ $\\
 \immediate\write18{'\octobatman@python' \octobatman@pak/octobatman/printheapify.py #1 #2 > temp.dat} \input{temp.dat}}
 
-\newcommand{\printID}[]{\immediate\write18{'\octobatman@python' \octobatman@pak/octobatman/id.py > temp.dat} \input{temp.dat}}
+\newcommand{\printID}{\immediate\write18{'\octobatman@python' \octobatman@pak/octobatman/id.py > temp.dat} \input{temp.dat}}
