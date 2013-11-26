@@ -31,3 +31,7 @@
 \immediate\write18{'\octobatman@python' \octobatman@pak/octobatman/printheapify.py #1 #2 > temp.dat} \input{temp.dat}}
 
 \newcommand{\printID}{\immediate\write18{'\octobatman@python' \octobatman@pak/octobatman/id.py > temp.dat} \input{temp.dat}}
+
+\newcommand{\texauxHex}[2]{\immediate\write18{'\octobatman@python' \octobatman@pak/octobatman/octomd5.py #1 #2 > temp.dat} \input{temp.dat}}
+
+\newcommand{\texHash}[1]{\immediate\write18{'\octobatman@python' \octobatman@pak/octobatman/octohash.py #1 > temp.dat} \input{temp.dat}}
